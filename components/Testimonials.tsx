@@ -21,7 +21,7 @@ const testimonials = [
     name: 'Amit Kumar',
     location: 'Bangalore',
     rating: 5,
-    text: 'Highly recommend! Their online process made everything so easy. I didn't have to visit any office. Everything was done from home.',
+    text: 'Highly recommend! Their online process made everything so easy. I did not have to visit any office. Everything was done from home.',
     business: 'Manufacturing Unit'
   },
   {
@@ -63,7 +63,7 @@ const Testimonials = () => {
 
               {/* Testimonial Text */}
               <p className="text-gray-700 mb-4 leading-relaxed text-sm">
-                "{testimonial.text}"
+                &quot;{testimonial.text}&quot;
               </p>
 
               {/* Author */}
