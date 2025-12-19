@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,11 +30,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
 
@@ -43,10 +42,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Popular Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/company-registration" className="hover:text-white transition-colors">Company Registration</Link></li>
-              <li><Link href="/services/gst-registration" className="hover:text-white transition-colors">GST Registration</Link></li>
-              <li><Link href="/services/msme-registration" className="hover:text-white transition-colors">MSME Registration</Link></li>
-              <li><Link href="/services/trademark-registration" className="hover:text-white transition-colors">Trademark Registration</Link></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Company Registration</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">GST Registration</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">MSME Registration</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">Trademark Registration</a></li>
             </ul>
           </div>
 
@@ -75,8 +74,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p>&copy; {currentYear} Business Consultancy. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
