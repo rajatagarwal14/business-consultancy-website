@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Button from './Button';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,96 +15,99 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
-    { name: 'Company Registration', href: '/services/company-registration' },
-    { name: 'GST Registration', href: '/services/gst-registration' },
-    { name: 'MSME Registration', href: '/services/msme-registration' },
-    { name: 'Trademark Registration', href: '/services/trademark-registration' },
-    { name: 'ISO Certification', href: '/services/iso-certification' },
-    { name: 'ITR Filing', href: '/services/itr-filing' },
-  ];
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}
-    >
+    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'glass-dark shadow-premium py-4' : 'bg-transparent py-6'
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+          <a href="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-xl">BC</span>
             </div>
-            <span className="font-heading font-bold text-xl text-gray-900">
-              Business Consultancy
+            <span className="text-white font-bold text-xl hidden sm:block">
+              BusinessConsult<span className="text-green-400">.in</span>
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+          <div className="hidden lg:flex items-center gap-8">
+            <a href="#home" className="text-white/90 hover:text-white transition-colors font-medium">
               Home
-            </Link>
+            </a>
             
             {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-1">
                 Services
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
               {isServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                >
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-4 w-64 glass-dark rounded-2xl p-4 shadow-premium-lg animate-fadeInDown">
+                  <div className="grid gap-2">
+                    {[
+                      'Company Registration',
+                      'GST Registration',
+                      'MSME Registration',
+                      'Trademark Registration',
+                      'ISO Certification',
+                      'ITR Filing'
+                    ].map((service) => (
+                      <a
+                        key={service}
+                        href="#services"
+                        className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all"
+                      >
+                        {service}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
 
-            <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              About Us
-            </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <a href="#about" className="text-white/90 hover:text-white transition-colors font-medium">
+              About
+            </a>
+            <a href="#process" className="text-white/90 hover:text-white transition-colors font-medium">
+              How It Works
+            </a>
+            <a href="#contact" className="text-white/90 hover:text-white transition-colors font-medium">
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button href="/contact" size="md">
-              Book Free Consultation
-            </Button>
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="tel:+919876543210"
+              className="text-white/90 hover:text-white transition-colors flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span className="font-semibold">+91 98765 43210</span>
+            </a>
+            <a
+              href="#services"
+              className="btn-premium btn-secondary"
+            >
+              Get Started
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -120,41 +121,39 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+          <div className="lg:hidden mt-4 glass-dark rounded-2xl p-6 animate-fadeInDown">
+            <div className="flex flex-col gap-4">
+              <a href="#home" className="text-white/90 hover:text-white transition-colors font-medium py-2">
                 Home
-              </Link>
-              
-              <div className="space-y-2">
-                <div className="text-gray-900 font-semibold">Services</div>
-                {services.map((service) => (
-                  <Link
-                    key={service.name}
-                    href={service.href}
-                    className="block pl-4 text-gray-600 hover:text-blue-600 transition-colors text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-
-              <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Pricing
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                About Us
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              </a>
+              <a href="#services" className="text-white/90 hover:text-white transition-colors font-medium py-2">
+                Services
+              </a>
+              <a href="#about" className="text-white/90 hover:text-white transition-colors font-medium py-2">
+                About
+              </a>
+              <a href="#process" className="text-white/90 hover:text-white transition-colors font-medium py-2">
+                How It Works
+              </a>
+              <a href="#contact" className="text-white/90 hover:text-white transition-colors font-medium py-2">
                 Contact
-              </Link>
-              
-              <Button href="/contact" size="md" className="w-full">
-                Book Free Consultation
-              </Button>
+              </a>
+              <hr className="border-white/20" />
+              <a
+                href="tel:+919876543210"
+                className="text-white flex items-center gap-2 py-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+91 98765 43210</span>
+              </a>
+              <a
+                href="#services"
+                className="btn-premium btn-secondary w-full text-center"
+              >
+                Get Started
+              </a>
             </div>
           </div>
         )}
