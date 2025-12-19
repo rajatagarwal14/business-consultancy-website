@@ -54,14 +54,9 @@ const FAQ = () => {
                 className="w-full text-left flex justify-between items-center"
               >
                 <h3 className="text-lg font-semibold">{faq.question}</h3>
-                <svg
-                  className={`w-6 h-6 text-primary transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <span className={`text-2xl text-primary transition-transform ${openIndex === index ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
               </button>
               {openIndex === index && (
                 <div className="mt-4 text-gray-600">
