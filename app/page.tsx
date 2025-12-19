@@ -6,7 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Hero />
