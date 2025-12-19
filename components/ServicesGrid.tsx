@@ -70,8 +70,8 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="section bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="services" className="section bg-gradient-to-b from-white to-gray-50 relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fadeInUp">
           <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full font-semibold text-sm mb-4">
             Our Services

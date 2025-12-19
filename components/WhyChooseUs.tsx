@@ -45,8 +45,8 @@ const WhyChooseUs = () => {
   return (
     <section className="section bg-white relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-10 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-10 -z-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fadeInUp">
@@ -87,7 +87,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Trust Stats */}
-        <div className="mt-20 glass rounded-3xl p-12 max-w-5xl mx-auto animate-fadeInUp delay-500">
+        <div className="mt-20 bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-12 max-w-5xl mx-auto animate-fadeInUp delay-500 border border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">5000+</div>

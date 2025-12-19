@@ -49,7 +49,7 @@ const HowItWorks = () => {
   return (
     <section id="process" className="section gradient-hero relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute inset-0 gradient-mesh opacity-30"></div>
+      <div className="absolute inset-0 gradient-mesh opacity-20 -z-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fadeInUp">
