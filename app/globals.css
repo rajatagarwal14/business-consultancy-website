@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed navbar */
 }
 
 body {
@@ -76,31 +77,37 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
   text-align: center;
   text-decoration: none;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
   border: none;
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98) !important;
 }
 
 .btn-primary {
   background: var(--royal-blue);
   color: var(--white);
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
 }
 
 .btn-primary:hover {
   background: #1e3a8a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.4);
 }
 
 .btn-secondary {
   background: var(--deep-green);
   color: var(--white);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
 }
 
 .btn-secondary:hover {
   background: #047857;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.4);
 }
 
 .btn-outline {
@@ -112,6 +119,8 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 .btn-outline:hover {
   background: var(--royal-blue);
   color: var(--white);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
 }
 
 /* Cards */
@@ -148,8 +157,21 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.6s ease-out;
+}
+
+.btn-primary {
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* Utility Classes */

@@ -27,7 +27,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="section bg-white">
+    <section id="how-it-works" className="section bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="mb-4">How It Works</h2>

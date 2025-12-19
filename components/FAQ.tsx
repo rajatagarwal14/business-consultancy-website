@@ -37,7 +37,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="section bg-gray-50">
+    <section id="faq" className="section bg-gray-50">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="mb-4">Frequently Asked Questions</h2>
@@ -48,21 +48,34 @@ const FAQ = () => {
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card" style={{ cursor: 'pointer' }}>
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left flex justify-between items-center"
               >
-                <h3 className="text-lg font-semibold">{faq.question}</h3>
-                <span className={`text-2xl text-primary transition-transform ${openIndex === index ? 'rotate-180' : ''}`}>
+                <h3 className="text-lg font-semibold pr-4">{faq.question}</h3>
+                <span 
+                  className="text-2xl text-blue-600 flex-shrink-0"
+                  style={{
+                    transition: 'transform 0.3s ease',
+                    transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)'
+                  }}
+                >
                   ▼
                 </span>
               </button>
-              {openIndex === index && (
-                <div className="mt-4 text-gray-600">
+              <div 
+                style={{
+                  maxHeight: openIndex === index ? '500px' : '0',
+                  opacity: openIndex === index ? 1 : 0,
+                  overflow: 'hidden',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <div className="mt-4 pt-4 text-gray-600 border-t border-gray-200">
                   {faq.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

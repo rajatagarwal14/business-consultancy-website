@@ -4,8 +4,16 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="section bg-gradient-to-br from-blue-50 to-white py-24">
-      <div className="container">
+    <section className="section py-24 relative overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #f0fdf4 100%)',
+    }}>
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: 'radial-gradient(circle at 2px 2px, #1e40af 1px, transparent 0)',
+        backgroundSize: '40px 40px'
+      }}></div>
+      
+      <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center fade-in">
           <h1 className="mb-6">
             Start, Register & Grow Your Business — <span className="gradient-text">The Easy Way</span>
