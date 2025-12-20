@@ -4,85 +4,54 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    question: 'How long does company registration take?',
-    answer: 'Private Limited Company registration typically takes 7-10 working days. GST and MSME registrations can be completed within 1-3 days.'
-  },
-  {
-    question: 'Is everything done online?',
-    answer: 'Yes, 100% online. You don\'t need to visit any government office. Just share your documents digitally, and we handle the rest.'
+    question: 'How long does the registration process take?',
+    answer: 'The time varies by service type. GST registration typically takes 3-7 days, Private Limited Company registration takes 10-15 days, and trademark registration takes 2-3 months.'
   },
   {
     question: 'What documents do I need?',
-    answer: 'Basic documents include PAN card, Aadhaar, address proof, and passport-size photos. Specific requirements vary by service — we\'ll guide you through it.'
+    answer: 'Required documents vary by service but generally include PAN card, Aadhaar card, address proof, and photographs. We will provide you with a specific checklist once you choose your service.'
   },
   {
-    question: 'Are there any hidden charges?',
-    answer: 'No hidden charges. The price you see is the price you pay. Government fees (if any) are mentioned separately.'
+    question: 'Is my data secure?',
+    answer: 'Yes, we use bank-level encryption and follow strict data protection protocols. Your information is never shared with third parties without your consent.'
   },
   {
-    question: 'What if I need help after registration?',
-    answer: 'We provide ongoing support for compliance, tax filing, annual returns, and any legal queries you may have.'
-  },
-  {
-    question: 'Can I register a business from anywhere in India?',
-    answer: 'Yes, our services are available pan-India. You can register your business from any state or city.'
+    question: 'Do you provide post-registration support?',
+    answer: 'Absolutely! We offer ongoing support for compliance, filing returns, and any queries you may have after registration.'
   }
 ];
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <section id="faq" className="section bg-gray-50">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Got questions? We've got answers
-          </p>
-        </div>
+    <section className="section">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          Frequently Asked <span className="gradient-text">Questions</span>
+        </h2>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="card" style={{ cursor: 'pointer' }}>
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center"
-              >
-                <h3 className="text-lg font-semibold pr-4">{faq.question}</h3>
-                <span 
-                  className="text-2xl text-blue-600 flex-shrink-0"
-                  style={{
-                    transition: 'transform 0.3s ease',
-                    transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)'
-                  }}
-                >
-                  ▼
+            <div key={index} className="card-premium cursor-pointer" onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-gray-900 pr-8">{faq.question}</h3>
+                <span className="text-3xl text-blue-600 transition-transform duration-300" style={{ transform: openIndex === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+                  +
                 </span>
-              </button>
-              <div 
-                style={{
-                  maxHeight: openIndex === index ? '500px' : '0',
-                  opacity: openIndex === index ? 1 : 0,
-                  overflow: 'hidden',
-                  transition: 'all 0.3s ease'
-                }}
-              >
+              </div>
+              {openIndex === index && (
                 <div className="mt-4 pt-4 text-gray-600 border-t border-gray-200">
                   {faq.answer}
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+          <p className="text-lg font-semibold text-gray-600 mb-4">Still have questions?</p>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Chat with us on WhatsApp
           </a>
         </div>
