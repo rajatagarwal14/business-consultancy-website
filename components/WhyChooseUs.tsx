@@ -10,7 +10,7 @@ const features = [
     gradient: 'from-blue-500 to-blue-600'
   },
   {
-    icon: '💻',
+    icon: '��',
     title: 'Online Process',
     description: 'Complete your registration from the comfort of your home',
     gradient: 'from-green-500 to-green-600'
@@ -40,8 +40,8 @@ const WhyChooseUs = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="card-premium text-center group">
-              <div className={`icon-wrapper mx-auto bg-gradient-to-br ${feature.gradient}`}>
-                <span className="text-4xl">{feature.icon}</span>
+              <div className={`icon-wrapper mx-auto mb-6 bg-gradient-to-br ${feature.gradient}`}>
+                <span className="text-3xl">{feature.icon}</span>
               </div>
               <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
               <p className="text-gray-600 leading-relaxed">{feature.description}</p>

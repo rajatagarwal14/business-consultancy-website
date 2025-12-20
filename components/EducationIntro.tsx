@@ -6,16 +6,13 @@ const EducationIntro = () => {
   return (
     <section className="section bg-white">
       <div className="container mx-auto px-6 max-w-6xl">
-        {/* Main Headline */}
         <h2 className="text-center mb-6 text-4xl md:text-5xl font-bold text-gray-900">
-          Understanding Business Registration in India
+          Why Business <span className="gradient-text">Registration</span> Matters
         </h2>
-        
         <p className="text-center text-xl text-gray-600 mb-16 leading-relaxed max-w-4xl mx-auto">
-          Starting a business in India requires more than just a great idea. Legal compliance isn't optional—it's your foundation for growth, credibility, and protection.
+          Most entrepreneurs don't realize the critical importance of proper registration until it's too late
         </p>
 
-        {/* Key Points Grid - Consistent Card Style */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="card-premium text-center group">
             <div className="icon-wrapper mx-auto mb-6 bg-gradient-to-br from-red-50 to-red-100">
@@ -48,12 +45,10 @@ const EducationIntro = () => {
           </div>
         </div>
 
-        {/* Registration Timeline - Premium Card */}
         <div className="card-premium max-w-4xl mx-auto">
           <h3 className="font-bold text-3xl mb-8 text-gray-900 text-center">
-            When Should You Register?
+            Your Registration <span className="gradient-text">Timeline</span>
           </h3>
-          
           <div className="space-y-6">
             <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl">
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
@@ -62,7 +57,7 @@ const EducationIntro = () => {
               <div className="flex-1">
                 <h4 className="font-bold text-xl text-gray-900 mb-2">Before You Start</h4>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong>Trademark</strong> (if unique brand), <strong>Business Structure</strong> (Pvt Ltd/LLP/Partnership), <strong>FSSAI</strong> (food businesses - mandatory before first sale)
+                  Many entrepreneurs skip this and face rejection, delays, or legal issues later. <strong>Get it right from day one.</strong>
                 </p>
               </div>
             </div>
@@ -72,38 +67,25 @@ const EducationIntro = () => {
                 2
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-xl text-gray-900 mb-2">Within First Month</h4>
+                <h4 className="font-bold text-xl text-gray-900 mb-2">During Registration</h4>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong>GST</strong> (if turnover exceeds limits or selling online), <strong>MSME/Udyam</strong> (for government benefits)
+                  Incomplete or incorrect documentation causes 70% of registration delays. Our experts ensure 100% accuracy.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
+            <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
                 3
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-xl text-gray-900 mb-2">When Scaling</h4>
+                <h4 className="font-bold text-xl text-gray-900 mb-2">After Registration</h4>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong>ISO Certification</strong> (for enterprise clients/exports), <strong>Private Limited</strong> (before raising funding)
+                  Ongoing compliance is crucial. We provide continued support to keep your business legally protected.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-700 mb-6 font-semibold text-lg">
-            Not sure which registrations you need?
-          </p>
-          <a 
-            href="#services"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            💡 Take Our Free Quiz
-          </a>
         </div>
       </div>
     </section>

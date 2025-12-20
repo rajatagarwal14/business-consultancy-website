@@ -47,7 +47,9 @@ const Testimonials = () => {
 
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-50 to-green-50 px-8 py-4 rounded-2xl border border-blue-200">
-            <span className="text-3xl">✓</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+              <span className="text-2xl">✓</span>
+            </div>
             <span className="text-gray-900 font-bold text-lg">5000+ Happy Clients | 4.9/5 Average Rating</span>
           </div>
         </div>

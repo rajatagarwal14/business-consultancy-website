@@ -39,8 +39,8 @@ const HowItWorks = () => {
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                 {index + 1}
               </div>
-              <div className="icon-wrapper bg-gradient-to-br from-blue-500 to-green-500">
-                <span className="text-4xl">{step.icon}</span>
+              <div className="icon-wrapper mb-6 bg-gradient-to-br from-blue-500 to-green-500">
+                <span className="text-3xl">{step.icon}</span>
               </div>
               <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
               <p className="text-gray-600 leading-relaxed">{step.description}</p>

@@ -19,25 +19,25 @@ const FinalCTA = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-3">
-              <span className="text-2xl">💬</span> Start on WhatsApp
+              <span className="text-3xl">💬</span> Start on WhatsApp
             </a>
             <a href="#services" className="bg-white/20 backdrop-blur-sm text-white border-2 border-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/30 transition-all duration-300 inline-flex items-center justify-center gap-3">
-              <span className="text-2xl">📋</span> View All Services
+              <span className="text-3xl">📋</span> View All Services
             </a>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-extrabold mb-2">5000+</div>
-              <div className="opacity-90">Happy Clients</div>
+              <div className="text-5xl font-extrabold mb-2">5000+</div>
+              <div className="opacity-90 text-base">Happy Clients</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-extrabold mb-2">4.9/5</div>
-              <div className="opacity-90">Average Rating</div>
+              <div className="text-5xl font-extrabold mb-2">4.9/5</div>
+              <div className="opacity-90 text-base">Average Rating</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-extrabold mb-2">7-10</div>
-              <div className="opacity-90">Days Average</div>
+              <div className="text-5xl font-extrabold mb-2">7-10</div>
+              <div className="opacity-90 text-base">Days Average</div>
             </div>
           </div>
         </div>
