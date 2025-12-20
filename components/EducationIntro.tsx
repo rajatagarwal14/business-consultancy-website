@@ -4,129 +4,106 @@ import React from 'react';
 
 const EducationIntro = () => {
   return (
-    <section className="section bg-gradient-to-b from-blue-50 to-white py-16">
-      <div className="container">
-        <div className="max-w-4xl mx-auto">
-          {/* Main Headline */}
-          <h2 className="text-center mb-6 text-3xl md:text-4xl font-extrabold text-gray-900">
-            Understanding Business Registration in India
-          </h2>
-          
-          <p className="text-center text-xl text-gray-600 mb-12 leading-relaxed">
-            Starting a business in India requires more than just a great idea. Legal compliance isn't optional—it's your foundation for growth, credibility, and protection.
-          </p>
+    <section className="section bg-white">
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Main Headline */}
+        <h2 className="text-center mb-6 text-4xl md:text-5xl font-bold text-gray-900">
+          Understanding Business Registration in India
+        </h2>
+        
+        <p className="text-center text-xl text-gray-600 mb-16 leading-relaxed max-w-4xl mx-auto">
+          Starting a business in India requires more than just a great idea. Legal compliance isn't optional—it's your foundation for growth, credibility, and protection.
+        </p>
 
-          {/* Key Points Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⚠️</span>
-              </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Why It Matters</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Operating without proper registration exposes you to <strong className="text-red-600">penalties up to ₹5 lakhs</strong>, legal disputes, and business shutdown.
-              </p>
+        {/* Key Points Grid - Consistent Card Style */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="card-premium text-center group">
+            <div className="icon-wrapper mx-auto mb-6 bg-gradient-to-br from-red-50 to-red-100">
+              <span className="text-3xl">⚠️</span>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🛡️</span>
-              </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Protection First</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Proper structure protects your <strong className="text-blue-600">personal assets</strong>, enables funding, and builds trust with clients and investors.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">✓</span>
-              </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Growth Enabler</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Compliance unlocks <strong className="text-green-600">government benefits</strong>, bank loans, GST credits, and access to larger markets.
-              </p>
-            </div>
-          </div>
-
-          {/* Registration Timeline Context */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 className="font-bold text-xl mb-6 text-gray-900 text-center">
-              When Should You Register?
-            </h3>
-            
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                  1
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Before You Start</h4>
-                  <p className="text-gray-600 text-sm">
-                    <strong>Trademark</strong> (if unique brand), <strong>Business Structure</strong> (Pvt Ltd/LLP/Partnership), <strong>FSSAI</strong> (food businesses - mandatory before first sale)
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                  2
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Within First Month</h4>
-                  <p className="text-gray-600 text-sm">
-                    <strong>GST</strong> (if turnover exceeds limits or selling online), <strong>MSME/Udyam</strong> (for government benefits)
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                  3
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">When Scaling</h4>
-                  <p className="text-gray-600 text-sm">
-                    <strong>ISO Certification</strong> (for enterprise clients/exports), <strong>Private Limited</strong> (before raising funding)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-10">
-            <p className="text-gray-700 mb-4 font-medium">
-              Not sure which registrations you need?
+            <h3 className="font-bold text-2xl mb-4 text-gray-900">Why It Matters</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Operating without proper registration exposes you to <strong className="text-red-600">penalties up to ₹5 lakhs</strong>, legal disputes, and business shutdown.
             </p>
-            <a 
-              href="https://wa.me/919876543210?text=I need help understanding which business registrations I need" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block"
-              style={{
-                background: 'linear-gradient(135deg, #1e40af 0%, #059669 100%)',
-                color: 'white',
-                padding: '16px 40px',
-                borderRadius: '12px',
-                fontWeight: '700',
-                fontSize: '16px',
-                textDecoration: 'none',
-                boxShadow: '0 8px 24px rgba(30, 64, 175, 0.3)',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px) scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 12px 32px rgba(30, 64, 175, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(30, 64, 175, 0.3)';
-              }}
-            >
-              📞 Talk to a Compliance Expert
-            </a>
           </div>
+
+          <div className="card-premium text-center group">
+            <div className="icon-wrapper mx-auto mb-6 bg-gradient-to-br from-blue-50 to-blue-100">
+              <span className="text-3xl">🛡️</span>
+            </div>
+            <h3 className="font-bold text-2xl mb-4 text-gray-900">Protection First</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Proper structure protects your <strong className="text-blue-600">personal assets</strong>, enables funding, and builds trust with clients and investors.
+            </p>
+          </div>
+
+          <div className="card-premium text-center group">
+            <div className="icon-wrapper mx-auto mb-6 bg-gradient-to-br from-green-50 to-green-100">
+              <span className="text-3xl">✓</span>
+            </div>
+            <h3 className="font-bold text-2xl mb-4 text-gray-900">Growth Enabler</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Compliance unlocks <strong className="text-green-600">government benefits</strong>, bank loans, GST credits, and access to larger markets.
+            </p>
+          </div>
+        </div>
+
+        {/* Registration Timeline - Premium Card */}
+        <div className="card-premium max-w-4xl mx-auto">
+          <h3 className="font-bold text-3xl mb-8 text-gray-900 text-center">
+            When Should You Register?
+          </h3>
+          
+          <div className="space-y-6">
+            <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
+                1
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-xl text-gray-900 mb-2">Before You Start</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong>Trademark</strong> (if unique brand), <strong>Business Structure</strong> (Pvt Ltd/LLP/Partnership), <strong>FSSAI</strong> (food businesses - mandatory before first sale)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
+                2
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-xl text-gray-900 mb-2">Within First Month</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong>GST</strong> (if turnover exceeds limits or selling online), <strong>MSME/Udyam</strong> (for government benefits)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg">
+                3
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-xl text-gray-900 mb-2">When Scaling</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong>ISO Certification</strong> (for enterprise clients/exports), <strong>Private Limited</strong> (before raising funding)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <p className="text-gray-700 mb-6 font-semibold text-lg">
+            Not sure which registrations you need?
+          </p>
+          <a 
+            href="#services"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+          >
+            💡 Take Our Free Quiz
+          </a>
         </div>
       </div>
     </section>
