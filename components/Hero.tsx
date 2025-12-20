@@ -21,20 +21,20 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="mb-6 leading-tight" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
-            Start, Register & Grow<br />
-            Your Business — <span className="gradient-text" style={{ 
+            Expert Guidance for<br />
+            <span className="gradient-text" style={{ 
               background: 'linear-gradient(135deg, #1e40af 0%, #059669 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               fontWeight: '800'
-            }}>The Easy Way</span>
+            }}>Business Compliance</span> in India
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-            Simple, affordable online compliance services for Indian entrepreneurs.<br />
-            <span className="text-blue-700 font-semibold">Company registration, GST, MSME, trademarks</span> — all handled by experts.
+            We help entrepreneurs <strong>understand</strong> what they need, <strong>avoid costly mistakes</strong>, and <strong>register correctly</strong> the first time.<br />
+            <span className="text-blue-700 font-semibold">Advisory-led compliance services</span> — not just paperwork.
           </p>
 
           {/* CTA Buttons */}
@@ -64,10 +64,10 @@ const Hero = () => {
                 e.currentTarget.style.boxShadow = '0 8px 24px rgba(30, 64, 175, 0.4)';
               }}
             >
-              🚀 Get Started Now
+              💡 See What You Need
             </a>
             <a 
-              href="https://wa.me/919876543210" 
+              href="https://wa.me/919876543210?text=I need expert guidance on business compliance" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{
@@ -95,7 +95,7 @@ const Hero = () => {
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.1)';
               }}
             >
-              💬 Book Free Consultation
+              📞 Book Expert Consultation
             </a>
           </div>
 
