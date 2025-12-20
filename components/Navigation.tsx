@@ -29,12 +29,46 @@ const Navigation = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <a href="#services" className="block px-4 py-3 hover:bg-gray-50">Company Registration</a>
-                <a href="#services" className="block px-4 py-3 hover:bg-gray-50">GST Registration</a>
-                <a href="#services" className="block px-4 py-3 hover:bg-gray-50">Trademark</a>
-                <a href="#services" className="block px-4 py-3 hover:bg-gray-50">MSME/Udyam</a>
-                <a href="#services" className="block px-4 py-3 hover:bg-gray-50">All Services</a>
+              <div className="absolute left-0 mt-2 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all max-h-96 overflow-y-auto">
+                <a href="/services/private-limited-company" className="block px-4 py-3 hover:bg-blue-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">⭐ Private Limited Company</div>
+                  <div className="text-xs text-gray-500">Investor-ready structure</div>
+                </a>
+                <a href="/services/gst-registration" className="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">GST Registration</div>
+                  <div className="text-xs text-gray-500">Mandatory for e-commerce</div>
+                </a>
+                <a href="/services/fssai-license" className="block px-4 py-3 hover:bg-red-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">⚠️ FSSAI License</div>
+                  <div className="text-xs text-red-600">Critical - Jail risk</div>
+                </a>
+                <a href="/services/trademark-registration" className="block px-4 py-3 hover:bg-green-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">Trademark Registration</div>
+                  <div className="text-xs text-gray-500">Brand protection</div>
+                </a>
+                <a href="/services/msme-udyam-registration" className="block px-4 py-3 hover:bg-green-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">MSME/Udyam Registration</div>
+                  <div className="text-xs text-gray-500">₹5-10L+ subsidies</div>
+                </a>
+                <a href="/services/partnership-firm" className="block px-4 py-3 hover:bg-blue-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">Partnership Firm</div>
+                  <div className="text-xs text-gray-500">2-20 partners</div>
+                </a>
+                <a href="/services/llp-registration" className="block px-4 py-3 hover:bg-blue-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">⭐ LLP Registration</div>
+                  <div className="text-xs text-gray-500">Limited liability</div>
+                </a>
+                <a href="/services/one-person-company" className="block px-4 py-3 hover:bg-green-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">One Person Company</div>
+                  <div className="text-xs text-gray-500">Solo ownership</div>
+                </a>
+                <a href="/services/iso-certification" className="block px-4 py-3 hover:bg-green-50 border-b border-gray-100">
+                  <div className="font-semibold text-gray-900">ISO Certification</div>
+                  <div className="text-xs text-gray-500">Required for tenders</div>
+                </a>
+                <a href="/#services" className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white text-center font-semibold rounded-b-lg hover:from-blue-700 hover:to-green-700">
+                  View All Services →
+                </a>
               </div>
             </div>
             <a href="#how-it-works" className="text-gray-700 hover:text-primary transition-colors">
@@ -84,12 +118,17 @@ const Navigation = () => {
                 </svg>
               </button>
               {servicesOpen && (
-                <div className="pl-4 space-y-2">
-                  <a href="#services" className="block py-2 text-gray-600 hover:text-primary">Company Registration</a>
-                  <a href="#services" className="block py-2 text-gray-600 hover:text-primary">GST Registration</a>
-                  <a href="#services" className="block py-2 text-gray-600 hover:text-primary">Trademark</a>
-                  <a href="#services" className="block py-2 text-gray-600 hover:text-primary">MSME/Udyam</a>
-                  <a href="#services" className="block py-2 text-gray-600 hover:text-primary">All Services</a>
+                <div className="pl-4 space-y-1">
+                  <a href="/services/private-limited-company" className="block py-2 text-gray-600 hover:text-primary">⭐ Private Limited Company</a>
+                  <a href="/services/gst-registration" className="block py-2 text-gray-600 hover:text-primary">GST Registration</a>
+                  <a href="/services/fssai-license" className="block py-2 text-red-600 hover:text-red-700 font-semibold">⚠️ FSSAI License (Critical)</a>
+                  <a href="/services/trademark-registration" className="block py-2 text-gray-600 hover:text-primary">Trademark Registration</a>
+                  <a href="/services/msme-udyam-registration" className="block py-2 text-gray-600 hover:text-primary">MSME/Udyam Registration</a>
+                  <a href="/services/partnership-firm" className="block py-2 text-gray-600 hover:text-primary">Partnership Firm</a>
+                  <a href="/services/llp-registration" className="block py-2 text-gray-600 hover:text-primary">⭐ LLP Registration</a>
+                  <a href="/services/one-person-company" className="block py-2 text-gray-600 hover:text-primary">One Person Company</a>
+                  <a href="/services/iso-certification" className="block py-2 text-gray-600 hover:text-primary">ISO Certification</a>
+                  <a href="/#services" className="block py-2 text-primary font-semibold hover:underline mt-2">View All Services →</a>
                 </div>
               )}
             </div>
